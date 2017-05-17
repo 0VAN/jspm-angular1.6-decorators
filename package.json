@@ -1,0 +1,125 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bootstrap.js",
+  "registry": "npm",
+  "dependencies": {
+    "angular-animate": "1.6.4",
+    "angular-decorators": "^1.2.0",
+    "angular-resource": "1.6.4",
+    "angular-ui-router": "1.0.3",
+    "text": "github:systemjs/plugin-text@^0.0.9"
+  },
+  "scripts": {
+    "jspm": "jspm",
+    "build": "jspm build --minify app/bootstrap.js"
+  },
+  "author": "",
+  "devDependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "bcrypt-pbkdf": "^1.0.0",
+    "buffer": "jspm-nodelibs-buffer@^0.2.0",
+    "child_process": "jspm-nodelibs-child_process@^0.2.0",
+    "cluster": "jspm-nodelibs-cluster@^0.2.0",
+    "console": "jspm-nodelibs-console@^0.2.0",
+    "constants": "jspm-nodelibs-constants@^0.2.0",
+    "crypto": "jspm-nodelibs-crypto@^0.2.0",
+    "dgram": "jspm-nodelibs-dgram@^0.2.0",
+    "dns": "jspm-nodelibs-dns@^0.2.0",
+    "domain": "jspm-nodelibs-domain@^0.2.0",
+    "ecc-jsbn": "~0.1.1",
+    "events": "jspm-nodelibs-events@^0.2.0",
+    "fs": "jspm-nodelibs-fs@^0.2.0",
+    "http": "jspm-nodelibs-http@^0.2.0",
+    "https": "jspm-nodelibs-https@^0.2.0",
+    "jodid25519": "^1.0.0",
+    "jsbn": "0.1",
+    "jspm": "^0.17.0-beta",
+    "module": "jspm-nodelibs-module@^0.2.0",
+    "net": "jspm-nodelibs-net@^0.2.0",
+    "os": "jspm-nodelibs-os@^0.2.0",
+    "plugin-babel": "systemjs-plugin-babel@^0.0.21",
+    "punycode": "jspm-nodelibs-punycode@^0.2.0",
+    "querystring": "jspm-nodelibs-querystring@^0.2.0",
+    "readline": "jspm-nodelibs-readline@^0.2.0",
+    "repl": "jspm-nodelibs-repl@^0.2.0",
+    "stream": "jspm-nodelibs-stream@^0.2.0",
+    "string_decoder": "jspm-nodelibs-string_decoder@^0.2.0",
+    "timers": "jspm-nodelibs-timers@^0.2.0",
+    "tls": "jspm-nodelibs-tls@^0.2.0",
+    "tty": "jspm-nodelibs-tty@^0.2.0",
+    "tweetnacl": "0.14",
+    "uglify-to-browserify": "1.0",
+    "url": "jspm-nodelibs-url@^0.2.0",
+    "util": "jspm-nodelibs-util@^0.2.0",
+    "vm": "jspm-nodelibs-vm@^0.2.0",
+    "zlib": "jspm-nodelibs-zlib@^0.2.0"
+  },
+  "peerDependencies": {
+    "angular": "1.6.4",
+    "assert": "jspm-nodelibs-assert@^0.2.0",
+    "path": "jspm-nodelibs-path@^0.2.0",
+    "process": "jspm-nodelibs-process@^0.2.0"
+  },
+  "overrides": {
+    "npm:angular@1.6.4": {
+      "format": "global",
+      "jspmNodeConversion": false,
+      "main": "angular",
+      "meta": {
+        "angular.js": {
+          "exports": "angular",
+          "format": "global"
+        }
+      }
+    },
+    "npm:debug@2.6.6": {
+      "main": "src/browser.js",
+      "jspmNodeConversion": false,
+      "format": "cjs",
+      "map": {
+        "./src/browser.js": {
+          "node": "./src/node.js"
+        },
+        "./node.js": {
+          "browser": "./src/browser.js"
+        },
+        "fs": "@node/fs",
+        "net": "@node/net",
+        "tty": "@node/tty",
+        "util": "@node/util"
+      }
+    },
+    "npm:inherits@2.0.3": {
+      "ignore": [
+        "test.js"
+      ]
+    },
+    "npm:lodash@4.17.4": {
+      "map": {
+        "buffer": "@empty",
+        "process": "@empty"
+      }
+    },
+    "npm:ms@0.7.3": {
+      "jspmNodeConversion": false,
+      "format": "cjs"
+    },
+    "npm:pbkdf2@3.0.12": {
+      "main": "browser.js"
+    },
+    "npm:reflect-metadata@0.1.10": {
+      "jspmNodeConversion": false,
+      "map": {
+        "crypto": {
+          "node": "@node/crypto",
+          "default": "@empty"
+        }
+      }
+    },
+    "npm:safe-buffer@5.0.1": {
+      "browser": "index.js"
+    }
+  }
+}

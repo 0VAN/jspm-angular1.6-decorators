@@ -1,0 +1,21 @@
+.login-section{
+    background: url(../image/bg_login.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-top:80px;
+}
+
+.login-section .login.card{
+    width:400px;
+    height:420px;
+    margin:auto;
+}
