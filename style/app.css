@@ -1,0 +1,35 @@
+
+.app{
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    padding-top:48px;
+    padding-left:250px;
+}
+
+
+.app .interface-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.app .interface-menu {
+    position: absolute;
+    top:48px;
+    bottom:0px;
+    left: 0px;
+    width:250px;
+    border-right:1px solid #d0d0d0;
+}
+
+.app .interface-menu .title{
+    border-bottom: 1px solid #d0d0d0;
+    padding:0px 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+    height:60px;
+}

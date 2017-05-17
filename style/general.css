@@ -14,3 +14,12 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 48px;
     line-height: 48px;
 }
+
+
+.title.title-center{
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -webkit-align-items: center;
+    align-items: center;
+}

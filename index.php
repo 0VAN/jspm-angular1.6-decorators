@@ -11,6 +11,7 @@
   
     <link href="style/general.css" rel="stylesheet">
     <link href="style/login.css" rel="stylesheet">
+    <link href="style/app.css" rel="stylesheet">
 
 <?php if(file_exists('build.js')):?>    
     <script src="build.js"></script>
