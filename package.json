@@ -5,19 +5,18 @@
   "main": "bootstrap.js",
   "registry": "npm",
   "dependencies": {
+    "jspm": "^0.17.0-beta",
+    "systemjs-plugin-babel": "0.0.21",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "@uirouter/angularjs": "latest",
     "angular-animate": "1.6.4",
-    "angular-decorators": "^1.2.0",
+    "angular-decorators": "1.2.0",
     "angular-resource": "1.6.4",
-    "angular-ui-router": "1.0.3",
-    "text": "github:systemjs/plugin-text@^0.0.9"
+    "systemjs-plugin-text": "0.0.9"
   },
-  "scripts": {
-    "jspm": "jspm",
-    "build": "jspm build --minify app/bootstrap.js"
-  },
-  "author": "",
-  "devDependencies": {
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+  "peerDependencies": {
+    "angular": "1.6.4",
+    "assert": "jspm-nodelibs-assert@^0.2.0",
     "bcrypt-pbkdf": "^1.0.0",
     "buffer": "jspm-nodelibs-buffer@^0.2.0",
     "child_process": "jspm-nodelibs-child_process@^0.2.0",
@@ -35,11 +34,11 @@
     "https": "jspm-nodelibs-https@^0.2.0",
     "jodid25519": "^1.0.0",
     "jsbn": "0.1",
-    "jspm": "^0.17.0-beta",
     "module": "jspm-nodelibs-module@^0.2.0",
     "net": "jspm-nodelibs-net@^0.2.0",
     "os": "jspm-nodelibs-os@^0.2.0",
-    "plugin-babel": "systemjs-plugin-babel@^0.0.21",
+    "path": "jspm-nodelibs-path@^0.2.0",
+    "process": "jspm-nodelibs-process@^0.2.0",
     "punycode": "jspm-nodelibs-punycode@^0.2.0",
     "querystring": "jspm-nodelibs-querystring@^0.2.0",
     "readline": "jspm-nodelibs-readline@^0.2.0",
@@ -56,12 +55,12 @@
     "vm": "jspm-nodelibs-vm@^0.2.0",
     "zlib": "jspm-nodelibs-zlib@^0.2.0"
   },
-  "peerDependencies": {
-    "angular": "1.6.4",
-    "assert": "jspm-nodelibs-assert@^0.2.0",
-    "path": "jspm-nodelibs-path@^0.2.0",
-    "process": "jspm-nodelibs-process@^0.2.0"
+  "scripts": {
+    "postinstall": "jspm install",
+    "jspm": "jspm",
+    "build": "jspm build --minify app/bootstrap.js"
   },
+  "author": "",
   "overrides": {
     "npm:angular@1.6.4": {
       "format": "global",
@@ -74,7 +73,43 @@
         }
       }
     },
+    "npm:bluebird@3.5.0": {
+      "meta": {
+        "js/browser/bluebird.js": {
+          "format": "global"
+        },
+        "js/browser/bluebird.min.js": {
+          "format": "global"
+        }
+      }
+    },
+    "npm:browserify-zlib@0.1.4": {
+      "dependencies": {
+        "readable-stream": "^2.0.2",
+        "pako": "~0.2.0"
+      },
+      "map": {
+        "_stream_transform": "readable-stream/transform"
+      }
+    },
     "npm:debug@2.6.6": {
+      "main": "src/browser.js",
+      "jspmNodeConversion": false,
+      "format": "cjs",
+      "map": {
+        "./src/browser.js": {
+          "node": "./src/node.js"
+        },
+        "./node.js": {
+          "browser": "./src/browser.js"
+        },
+        "fs": "@node/fs",
+        "net": "@node/net",
+        "tty": "@node/tty",
+        "util": "@node/util"
+      }
+    },
+    "npm:debug@2.6.8": {
       "main": "src/browser.js",
       "jspmNodeConversion": false,
       "format": "cjs",
@@ -119,6 +154,9 @@
       }
     },
     "npm:safe-buffer@5.0.1": {
+      "browser": "index.js"
+    },
+    "npm:safe-buffer@5.1.0": {
       "browser": "index.js"
     }
   }
